@@ -1,0 +1,10 @@
+<mat-card class="example-card">
+  <button (click)="goBack()">Back</button>
+  <mat-card *ngFor="let album of albumDetails; let i=index" class="card" (click)="getUserPhoto(album.id)">
+    <mat-card-content class="description">
+      UserID: {{album.userId}}<br>
+      AlbumID: {{album.id}}<br>
+      Album Title: {{album.title}}
+    </mat-card-content>
+  </mat-card>
+</mat-card>

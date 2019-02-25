@@ -1,0 +1,11 @@
+<mat-card class="example-card">
+  <button (click)="goBack()">Back</button>
+  <mat-card *ngFor="let photo of (photoDetails ? photoDetails.slice(0,5): []); let i=index" class="card">
+    <mat-card-content class="description">
+      AlbumID: {{photo.albumId}}<br>
+      PhotoID: {{photo.id}}<br>
+      Title: {{photo.title}}<br>
+      <img src="{{photo.url}}">
+    </mat-card-content>
+  </mat-card>
+</mat-card>

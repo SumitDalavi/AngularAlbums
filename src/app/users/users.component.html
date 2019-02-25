@@ -1,0 +1,26 @@
+<mat-card class="example-card">
+  <mat-card *ngFor="let user of userDetails; let i=index" class="card" (click)="getUserAlbum(user.id)">
+    <mat-card-content class="content">
+      <mat-card-header class="header">Name: {{user.name}}</mat-card-header>
+      <mat-card-subtitle class="meta">
+        <a>Username: {{user.username}}</a>
+      </mat-card-subtitle>
+      <mat-card-content class="description">
+        Address: {{user.address.street}}, {{user.address.suit}}, {{user.address.city}}, {{user.address.zipcode}}<br>
+        Phone: {{user.phone}}<br>
+        Website: {{user.website}}
+      </mat-card-content>
+    </mat-card-content>
+    <mat-card-content class="extra content">
+      <span class="right floated">
+        Email: {{user.email}}
+      </span>
+      <span>
+        <i class="user icon"></i>
+        {{user.company.name}}<br>
+        {{user.company.catchPhrase}}<br>
+        {{user.company.bs}}
+      </span>
+    </mat-card-content>
+  </mat-card>
+</mat-card>
